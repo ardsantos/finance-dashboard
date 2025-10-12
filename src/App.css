@@ -1,17 +1,11 @@
-@import "tailwindcss";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,61 +13,106 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-button {
+.header {
+  background-color: #ffffff;
+  padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.navigation {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #495057;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
 
-button:hover {
-  border-color: #646cff;
+.navigation a:hover {
+  background-color: #e9ecef;
+  color: #212529;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.main-content {
+  min-height: 500px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.dashboard,
+.transactions,
+.budget,
+.import {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard h2,
+.transactions h2,
+.budget h2,
+.import h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  a:hover {
-    color: #747bff;
+  .app {
+    padding: 0.5rem;
   }
 
-  button {
-    background-color: #f9f9f9;
+  .header,
+  .navigation,
+  .dashboard,
+  .transactions,
+  .budget,
+  .import {
+    padding: 1rem;
   }
 }
