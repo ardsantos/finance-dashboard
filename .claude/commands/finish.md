@@ -5,6 +5,7 @@ This command will:
 2. Stage and commit all changes with an auto-generated commit message
 3. Push the branch to the remote repository
 4. Create a pull request with a detailed description
+5. Return to branch 'develop'
 
 Usage:
 /finish [branch-name]
