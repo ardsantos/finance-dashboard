@@ -26,6 +26,7 @@ npm run lint:css
 This is a React-based personal finance dashboard built with modern web technologies. The application follows a component-based architecture with clear separation of concerns.
 
 ### Tech Stack
+
 - **React 19** with functional components and hooks
 - **Vite** for fast development and optimized builds
 - **React Router DOM** for client-side routing
@@ -49,6 +50,7 @@ src/
 ### Application Routing
 
 The app uses React Router with the following routes:
+
 - `/` and `/dashboard` - Main financial dashboard
 - `/transactions` - Transaction history and management
 - `/budget` - Budget planning and tracking
@@ -83,3 +85,7 @@ The app uses React Router with the following routes:
 ### Current Implementation State
 
 The application has a solid foundation with routing, styling, and basic structure in place. All main feature components (Dashboard, Transactions, Budget, Import) are currently placeholders ready for implementation. The project is configured for rapid development with proper tooling and modern React patterns.
+
+### Other Rules
+
+- Test tasks, lint and prettier after creating changes
